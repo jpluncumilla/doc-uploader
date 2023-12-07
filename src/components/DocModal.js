@@ -64,9 +64,9 @@ export const DocModal = () => {
                 </RadioGroup>
               </FormControl>
 
-              <Grid container alignItems="center">
-                <Typography mr={4}>Testing Center 1</Typography>
-                <FormControl style={{minWidth: 160}}>
+              <Grid container alignItems="center" mb={2}>
+                <Typography mr={6}>Testing Center 1</Typography>
+                <FormControl style={{minWidth: 160, marginRight: '2%'}}>
                 <InputLabel>Select Client</InputLabel>
                     <Select
                       value={age}
@@ -81,9 +81,9 @@ export const DocModal = () => {
                 <AccessTimeOutlinedIcon />
               </Grid>
 
-              <Grid container alignItems="center">
-                <Typography mr={4}>Testing Center 2</Typography>
-                <FormControl style={{minWidth: 160}}>
+              <Grid container alignItems="center" mb={2}>
+                <Typography mr={6}>Testing Center 2</Typography>
+                <FormControl style={{minWidth: 160, marginRight: '2%'}}>
                 <InputLabel>Select Client</InputLabel>
                     <Select
                       value={age}
@@ -98,9 +98,9 @@ export const DocModal = () => {
                 <AccessTimeOutlinedIcon />
               </Grid>
 
-              <Grid container alignItems="center">
-                <Typography mr={4}>Testing Center 3</Typography>
-                <FormControl style={{minWidth: 160}}>
+              <Grid container alignItems="center" mb={2}>
+                <Typography mr={6}>Testing Center 3</Typography>
+                <FormControl style={{minWidth: 160, marginRight: '2%'}}>
                 <InputLabel>Select Client</InputLabel>
                     <Select
                       value={age}
@@ -115,9 +115,9 @@ export const DocModal = () => {
                 <AccessTimeOutlinedIcon />
               </Grid>
 
-              <Grid container alignItems="center">
-                <Typography mr={4}>Testing Center 4</Typography>
-                <FormControl style={{minWidth: 160}}>
+              <Grid container alignItems="center" mb={2}>
+                <Typography mr={6}>Testing Center 4</Typography>
+                <FormControl style={{minWidth: 160, marginRight: '2%'}}>
                 <InputLabel>Select Client</InputLabel>
                     <Select
                       value={age}
