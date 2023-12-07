@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
-import { Button, Typography, Box, Modal } from '@mui/material';
+import { Button, Box, Modal } from '@mui/material';
+import {DocModal} from './components/DocModal';
 
 const style = {
   position: 'absolute',
@@ -32,7 +33,7 @@ function App() {
           onClose={dialogToggle}
         >
           <Box sx={style}>
-            <Typography>Hello world</Typography>
+            <DocModal />
           </Box>
         </Modal>
       </div>
