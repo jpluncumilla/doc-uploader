@@ -1,6 +1,17 @@
 import './App.css';
 import { useState } from 'react';
-import { Button } from '@mui/material';
+import { Button, Typography, Box, Modal } from '@mui/material';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 600,
+  height: 700,
+  bgcolor: '#ffffff',
+  p: 1,
+}
 
 function App() {
   const [openDialog, setOpenDialog] = useState(true)
@@ -15,6 +26,15 @@ function App() {
         <Button variant="outlined" onClick={dialogToggle}>
           Open dialog
         </Button>
+
+        <Modal
+          open={openDialog}
+          onClose={dialogToggle}
+        >
+          <Box sx={style}>
+            <Typography>Hello world</Typography>
+          </Box>
+        </Modal>
       </div>
     </div>
   );
