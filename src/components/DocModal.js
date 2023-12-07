@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Grid, Typography, FormControl, InputLabel, Select, MenuItem, OutlinedInput } from "@mui/material";
+import { Grid, Typography, FormControl, InputLabel, Select, MenuItem, Box, Button } from "@mui/material";
 
 export const DocModal = () => {
   const [age, setAge] = useState('')
@@ -42,7 +42,14 @@ export const DocModal = () => {
           <Grid item xs={5} align='center'>
           <Typography variant="body1" align="center">Document Upload</Typography>
           </Grid>
+
         </Grid>
+
+        <Box align='center'>
+          <Typography>Data in the import file is correct. Please continue to import.</Typography>
+          <Button>Continue Import</Button>
+          <Button>Cancel</Button>
+        </Box>
       </>
     );
   };
