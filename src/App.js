@@ -8,10 +8,11 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 600,
-  height: 700,
+  width: '75%',
+  height: '75%',
   bgcolor: '#ffffff',
-  p: 1,
+  p: 4,
+  borderRadius: 5
 }
 
 function App() {
@@ -30,7 +31,6 @@ function App() {
 
         <Modal
           open={openDialog}
-          onClose={dialogToggle}
         >
           <Box sx={style}>
             <DocModal />
