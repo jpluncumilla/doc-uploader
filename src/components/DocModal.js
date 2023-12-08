@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Grid, Typography, FormControl, InputLabel, Select, MenuItem, Box, Button, Switch, Radio, RadioGroup, FormControlLabel, Stack } from "@mui/material";
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import {Uploader} from './Uploader.tsx'
 
 export const DocModal = () => {
   const [age, setAge] = useState('')
@@ -16,8 +17,8 @@ export const DocModal = () => {
           <CloseOutlinedIcon />
         </Button>
 
-        <Typography variant="h4" align="center" color='#181c4f'>Document Upload</Typography>
-        <hr style={{width: '17em', marginTop: '1em', marginBottom: '3em'}}/>
+        <Typography variant="h4" align="center" color='#181c4f' mt={-2}>Document Upload</Typography>
+        <hr style={{width: '17em', marginTop: '1em', marginBottom: '2em'}}/>
 
         <Grid container spacing={6}>
             <Grid item xs={7} align='left'>
@@ -36,6 +37,9 @@ export const DocModal = () => {
 
               {/* UPLOADER */}
               <Typography variant="body1" align="left" color='#181c4f'>Select a manifest that you'd like to import</Typography>
+              <Box>
+                <Uploader />
+              </Box>
 
               <hr style={{width: '20em', marginTop: '1em', marginBottom: '1em'}} align="left"/>
 
@@ -150,7 +154,7 @@ export const DocModal = () => {
 
         </Grid>
 
-        <Box align='center' mt={4}>
+        <Box align='center' mt={2}>
           <Typography color='#181c4f' mb={2}>Data in the import file is correct. Please continue to import.</Typography>
               <Button variant="contained" size='large' sx={{marginRight: '2em', backgroundColor: '#181c4f', width: '15em', p: '1em 0'}}>Continue Import</Button>
               <Button variant="outlined" size='large' sx={{color: '#cf6304', borderColor: '#cf6304', width: '15em', p: '1em 0'}}>Cancel</Button>

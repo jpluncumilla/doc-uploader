@@ -11,7 +11,7 @@ const style = {
   width: '70%',
   height: '85%',
   bgcolor: '#ffffff',
-  p: 4,
+  p: 6,
   borderRadius: 5
 }
 
