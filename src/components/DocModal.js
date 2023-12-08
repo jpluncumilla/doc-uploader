@@ -17,11 +17,11 @@ export const DocModal = () => {
         </Button>
 
         <Typography variant="h4" align="center" color='#181c4f'>Document Upload</Typography>
-        <hr style={{width: '17em'}}/>
+        <hr style={{width: '17em', marginTop: '1em', marginBottom: '3em'}}/>
 
         <Grid container spacing={6}>
             <Grid item xs={7} align='left'>
-              <FormControl fullWidth>
+              <FormControl fullWidth size="small">
                 <InputLabel>Select Import Name:</InputLabel>
                 <Select
                   value={age}
@@ -32,23 +32,23 @@ export const DocModal = () => {
                   <MenuItem value={'Import name 2'}>Import Name 2</MenuItem>
                 </Select>
               </FormControl>
-              <hr style={{width: '20em'}} align="left" />
+              <hr style={{width: '20em', marginTop: '1em', marginBottom: '1em'}} align="left" />
 
               {/* UPLOADER */}
               <Typography variant="body1" align="left" color='#181c4f'>Select a manifest that you'd like to import</Typography>
 
-              <hr style={{width: '20em'}} align="left"/>
+              <hr style={{width: '20em', marginTop: '1em', marginBottom: '1em'}} align="left"/>
 
               {/* DATA CHECKING */}
               <Typography variant="body1" align="left" color='#181c4f'>Elapse Data Checking:</Typography>
               <Typography variant="body1" align="left" color='#038f2f'>No Elapsed Dates!</Typography>
-              <hr style={{width: '20em'}} align="left" />
+              <hr style={{width: '20em', marginTop: '1em', marginBottom: '1em'}} align="left" />
 
               {/* TOGGLE WINDOW */}
               <Typography variant="body1" align="left" color='#181c4f'>Tolerance Window:</Typography>
               <Grid container alignItems="center">
                 <FormControlLabel control={<Switch defaultChecked />} label="Toggle ON" color='#181c4f' />
-                <AccessTimeOutlinedIcon color='#181c4f'/>
+                <AccessTimeOutlinedIcon color='#181c4f' sx={{marginRight: '4px', color: '#181c4f'}}/>
                 <Typography variant="body1" align="left" color='#181c4f'>Select Tolerance Level</Typography>
               </Grid>
 
@@ -63,12 +63,12 @@ export const DocModal = () => {
                   <FormControlLabel value="No" control={<Radio />} label="No" />
                 </RadioGroup>
               </FormControl>
-              <hr style={{width: '20em'}} align="left"/>
+              <hr style={{width: '20em', marginTop: '1em', marginBottom: '1em'}} align="left"/>
 
 
               <Typography variant="body1" align="left" color='#181c4f'>Location Checking:</Typography>
               <Typography variant="body1" align="left" color='#038f2f'>All Available!</Typography>
-              <hr style={{width: '20em'}} align="left"/>
+              <hr style={{width: '20em', marginTop: '1em', marginBottom: '1em'}} align="left"/>
 
               <FormControl>
                 <Typography variant="body1" align="left" color='#181c4f'>Client:</Typography>
@@ -80,7 +80,7 @@ export const DocModal = () => {
 
               <Grid container alignItems="center" mb={2}>
                 <Typography mr={6} color='#181c4f'>Testing Center 1</Typography>
-                <FormControl style={{minWidth: 160, marginRight: '2%'}}>
+                <FormControl style={{minWidth: 160, marginRight: '2%'}} size="small">
                 <InputLabel>Select Client</InputLabel>
                     <Select
                       value={age}
@@ -92,12 +92,12 @@ export const DocModal = () => {
                     <MenuItem value={'Import name 2'}>Import Name 2</MenuItem>
                   </Select>
                 </FormControl>
-                <AccessTimeOutlinedIcon />
+                <AccessTimeOutlinedIcon sx={{color: '#181c4f'}}/>
               </Grid>
 
               <Grid container alignItems="center" mb={2}>
                 <Typography mr={6} color='#181c4f'>Testing Center 2</Typography>
-                <FormControl style={{minWidth: 160, marginRight: '2%'}}>
+                <FormControl style={{minWidth: 160, marginRight: '2%'}} size="small">
                 <InputLabel>Select Client</InputLabel>
                     <Select
                       value={age}
@@ -109,12 +109,12 @@ export const DocModal = () => {
                     <MenuItem value={'Import name 2'}>Import Name 2</MenuItem>
                   </Select>
                 </FormControl>
-                <AccessTimeOutlinedIcon />
+                <AccessTimeOutlinedIcon sx={{color: '#181c4f'}}/>
               </Grid>
 
               <Grid container alignItems="center" mb={2}>
                 <Typography mr={6} color='#181c4f'>Testing Center 3</Typography>
-                <FormControl style={{minWidth: 160, marginRight: '2%'}}>
+                <FormControl style={{minWidth: 160, marginRight: '2%'}} size="small">
                 <InputLabel>Select Client</InputLabel>
                     <Select
                       value={age}
@@ -126,12 +126,12 @@ export const DocModal = () => {
                     <MenuItem value={'Import name 2'}>Import Name 2</MenuItem>
                   </Select>
                 </FormControl>
-                <AccessTimeOutlinedIcon />
+                <AccessTimeOutlinedIcon sx={{color: '#181c4f'}}/>
               </Grid>
 
               <Grid container alignItems="center" mb={2}>
                 <Typography mr={6} color='#181c4f'>Testing Center 4</Typography>
-                <FormControl style={{minWidth: 160, marginRight: '2%'}}>
+                <FormControl style={{minWidth: 160, marginRight: '2%'}} size="small">
                 <InputLabel>Select Client</InputLabel>
                     <Select
                       value={age}
@@ -143,17 +143,17 @@ export const DocModal = () => {
                     <MenuItem value={'Import name 2'}>Import Name 2</MenuItem>
                   </Select>
                 </FormControl>
-                <AccessTimeOutlinedIcon />
+                <AccessTimeOutlinedIcon sx={{color: '#181c4f'}}/>
               </Grid>
 
             </Grid>
 
         </Grid>
 
-        <Box align='center'>
-          <Typography color='#181c4f'>Data in the import file is correct. Please continue to import.</Typography>
-              <Button variant="contained" size='large' sx={{marginRight: '2em', backgroundColor: '#181c4f'}}>Continue Import</Button>
-              <Button variant="outlined" size='large' sx={{color: '#cf6304', borderColor: '#cf6304'}}>Cancel</Button>
+        <Box align='center' mt={4}>
+          <Typography color='#181c4f' mb={2}>Data in the import file is correct. Please continue to import.</Typography>
+              <Button variant="contained" size='large' sx={{marginRight: '2em', backgroundColor: '#181c4f', width: '15em', p: '1em 0'}}>Continue Import</Button>
+              <Button variant="outlined" size='large' sx={{color: '#cf6304', borderColor: '#cf6304', width: '15em', p: '1em 0'}}>Cancel</Button>
         </Box>
       </>
     );

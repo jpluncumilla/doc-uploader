@@ -8,10 +8,10 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '75%',
-  height: '75%',
+  width: '70%',
+  height: '85%',
   bgcolor: '#ffffff',
-  p: 6,
+  p: 4,
   borderRadius: 5
 }
 
