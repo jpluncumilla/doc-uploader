@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Grid, Typography, FormControl, InputLabel, Select, MenuItem, Box, Button, Switch, Radio, RadioGroup, FormControlLabel } from "@mui/material";
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 export const DocModal = () => {
   const [age, setAge] = useState('')
@@ -11,9 +12,10 @@ export const DocModal = () => {
 
     return (
       <>
-        <button>X</button>
+        <Button><CloseOutlinedIcon /></Button>
 
-        <Typography variant="h3" align="center">Document Upload</Typography>
+        <Typography variant="h4" align="center">Document Upload</Typography>
+        <hr />
 
         <Grid container spacing={6}>
             <Grid item xs={7} align='left'>
@@ -28,18 +30,24 @@ export const DocModal = () => {
                   <MenuItem value={'Import name 2'}>Import Name 2</MenuItem>
                 </Select>
               </FormControl>
+              <hr />
 
               {/* UPLOADER */}
               <Typography variant="body1" align="left">Select a manifest that you'd like to import</Typography>
+              <hr />
 
               {/* DATA CHECKING */}
               <Typography variant="body1" align="left">Elapse Data Checking:</Typography>
               <Typography variant="body1" align="left">No Elapsed Dates!</Typography>
+              <hr />
 
               {/* TOGGLE WINDOW */}
               <Typography variant="body1" align="left">Tolerance Window:</Typography>
-              <FormControlLabel control={<Switch defaultChecked />} label="Toggle ON" />
-              <Typography variant="body1" align="left"><AccessTimeOutlinedIcon />Select Tolerance Level</Typography>
+              <Grid container alignItems="center">
+                <FormControlLabel control={<Switch defaultChecked />} label="Toggle ON" />
+                <AccessTimeOutlinedIcon />
+                <Typography variant="body1" align="left">Select Tolerance Level</Typography>
+              </Grid>
 
             </Grid>
 
@@ -52,9 +60,12 @@ export const DocModal = () => {
                   <FormControlLabel value="No" control={<Radio />} label="No" />
                 </RadioGroup>
               </FormControl>
+              <hr />
+
 
               <Typography variant="body1" align="left">Location Checking:</Typography>
               <Typography variant="body1" align="left">All Available!</Typography>
+              <hr />
 
               <FormControl>
                 <Typography variant="body1" align="left">Client:</Typography>
