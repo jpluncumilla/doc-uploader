@@ -15,7 +15,7 @@ export const DocModal = () => {
         <Button><CloseOutlinedIcon /></Button>
 
         <Typography variant="h4" align="center">Document Upload</Typography>
-        <hr />
+        <hr style={{width: '17em'}}/>
 
         <Grid container spacing={6}>
             <Grid item xs={7} align='left'>
@@ -30,16 +30,17 @@ export const DocModal = () => {
                   <MenuItem value={'Import name 2'}>Import Name 2</MenuItem>
                 </Select>
               </FormControl>
-              <hr />
+              <hr style={{width: '20em'}} align="left" />
 
               {/* UPLOADER */}
               <Typography variant="body1" align="left">Select a manifest that you'd like to import</Typography>
-              <hr />
+
+              <hr style={{width: '20em'}} align="left"/>
 
               {/* DATA CHECKING */}
               <Typography variant="body1" align="left">Elapse Data Checking:</Typography>
               <Typography variant="body1" align="left">No Elapsed Dates!</Typography>
-              <hr />
+              <hr style={{width: '20em'}} align="left" />
 
               {/* TOGGLE WINDOW */}
               <Typography variant="body1" align="left">Tolerance Window:</Typography>
@@ -60,12 +61,12 @@ export const DocModal = () => {
                   <FormControlLabel value="No" control={<Radio />} label="No" />
                 </RadioGroup>
               </FormControl>
-              <hr />
+              <hr style={{width: '20em'}} align="left"/>
 
 
               <Typography variant="body1" align="left">Location Checking:</Typography>
               <Typography variant="body1" align="left">All Available!</Typography>
-              <hr />
+              <hr style={{width: '20em'}} align="left"/>
 
               <FormControl>
                 <Typography variant="body1" align="left">Client:</Typography>
