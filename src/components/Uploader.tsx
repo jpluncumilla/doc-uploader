@@ -1,35 +1,23 @@
-import { Box, Button, Grid, Typography } from "@mui/material"
+import { Box, Button, Grid, LinearProgress, Typography } from "@mui/material"
 import DescriptionIcon from '@mui/icons-material/Description';
-import React, { useState, useCallback } from "react"
+import CropOriginalIcon from '@mui/icons-material/CropOriginal';
+import React, { useState, useCallback, useEffect } from "react"
 import {useDropzone} from 'react-dropzone'
 
 export const Uploader = () => {
-    const [file, setFile] = useState<File | undefined>()
+    const [filePresent, setFilePresent] = useState<boolean>(false)
 
     const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault();
-
-        if (typeof file === 'undefined') return
-        const formData = new FormData()
-        formData.append('file', file)
-
-        //TODO: Add cloud storage for upload with axios POST request for loader
-        console.log('STORED to state ====>', file)
+        setFilePresent(true)
     }
     
-    const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
-        const target = e.target as HTMLInputElement & { files: FileList }
-        //TODO remove console log
-        console.log('files', target.files)
-
-        setFile(target.files[0])
-    }
     //Dropzone functionality
     const onDrop = useCallback(acceptedFiles => {
         // Do something with the files
       }, [])
     
-    const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+    const {acceptedFiles, getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
     return (
         <>
@@ -55,9 +43,26 @@ export const Uploader = () => {
             </div>
             {// @ts-ignore
             <Grid item align='center' mt={2}>
-            <Button size="medium" variant="contained" onClick={handleSubmit}>Upload Manifest</Button>
+            <Button size="medium" variant="contained" onClick={handleSubmit} sx={{backgroundColor: '#181c4f'}}>Upload Manifest</Button>
             </Grid>  }      
         </Box>
+        { acceptedFiles[0] && filePresent && (
+            <>
+                <hr />
+                <Grid container>
+                    <Grid item>
+                        <CropOriginalIcon sx={{color:'#cf6304', fontSize: '50px'}}/>
+                    </Grid>
+                    <Typography mr={'50%'} sx={{color: '#a8a8a8'}}>{acceptedFiles[0].name}</Typography>
+                    <Typography>{acceptedFiles[0].size} MB</Typography>
+                    <Grid container>
+                        <Box width={'100%'}>
+                        <LinearProgress variant="determinate" value={100} sx={{backgroundColor: '#a8a8a8'}}/>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </>
+        )}
         </>
     )
 }
