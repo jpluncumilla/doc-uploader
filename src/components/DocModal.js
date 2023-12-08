@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Grid, Typography, FormControl, InputLabel, Select, MenuItem, Box, Button, Switch, Radio, RadioGroup, FormControlLabel } from "@mui/material";
+import { Grid, Typography, FormControl, InputLabel, Select, MenuItem, Box, Button, Switch, Radio, RadioGroup, FormControlLabel, Stack } from "@mui/material";
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
@@ -12,9 +12,11 @@ export const DocModal = () => {
 
     return (
       <>
-        <Button><CloseOutlinedIcon /></Button>
+        <Button sx={{color: '#ffffff', backgroundColor: '#181c4f', minWidth: '44px', padding: '6px 8px'}}>
+          <CloseOutlinedIcon />
+        </Button>
 
-        <Typography variant="h4" align="center">Document Upload</Typography>
+        <Typography variant="h4" align="center" color='#181c4f'>Document Upload</Typography>
         <hr style={{width: '17em'}}/>
 
         <Grid container spacing={6}>
@@ -33,21 +35,21 @@ export const DocModal = () => {
               <hr style={{width: '20em'}} align="left" />
 
               {/* UPLOADER */}
-              <Typography variant="body1" align="left">Select a manifest that you'd like to import</Typography>
+              <Typography variant="body1" align="left" color='#181c4f'>Select a manifest that you'd like to import</Typography>
 
               <hr style={{width: '20em'}} align="left"/>
 
               {/* DATA CHECKING */}
-              <Typography variant="body1" align="left">Elapse Data Checking:</Typography>
-              <Typography variant="body1" align="left">No Elapsed Dates!</Typography>
+              <Typography variant="body1" align="left" color='#181c4f'>Elapse Data Checking:</Typography>
+              <Typography variant="body1" align="left" color='#038f2f'>No Elapsed Dates!</Typography>
               <hr style={{width: '20em'}} align="left" />
 
               {/* TOGGLE WINDOW */}
-              <Typography variant="body1" align="left">Tolerance Window:</Typography>
+              <Typography variant="body1" align="left" color='#181c4f'>Tolerance Window:</Typography>
               <Grid container alignItems="center">
-                <FormControlLabel control={<Switch defaultChecked />} label="Toggle ON" />
-                <AccessTimeOutlinedIcon />
-                <Typography variant="body1" align="left">Select Tolerance Level</Typography>
+                <FormControlLabel control={<Switch defaultChecked />} label="Toggle ON" color='#181c4f' />
+                <AccessTimeOutlinedIcon color='#181c4f'/>
+                <Typography variant="body1" align="left" color='#181c4f'>Select Tolerance Level</Typography>
               </Grid>
 
             </Grid>
@@ -55,21 +57,21 @@ export const DocModal = () => {
 
             <Grid item xs={5} align='left'>
               <FormControl>
-                <Typography variant="body1" align="left">Split schedule using social distancing?</Typography>
+                <Typography variant="body1" align="left" color='#181c4f'>Split schedule using social distancing?</Typography>
                 <RadioGroup row >
-                  <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                  <FormControlLabel value="Yes" control={<Radio />} label="Yes" color='#181c4f'/>
                   <FormControlLabel value="No" control={<Radio />} label="No" />
                 </RadioGroup>
               </FormControl>
               <hr style={{width: '20em'}} align="left"/>
 
 
-              <Typography variant="body1" align="left">Location Checking:</Typography>
-              <Typography variant="body1" align="left">All Available!</Typography>
+              <Typography variant="body1" align="left" color='#181c4f'>Location Checking:</Typography>
+              <Typography variant="body1" align="left" color='#038f2f'>All Available!</Typography>
               <hr style={{width: '20em'}} align="left"/>
 
               <FormControl>
-                <Typography variant="body1" align="left">Client:</Typography>
+                <Typography variant="body1" align="left" color='#181c4f'>Client:</Typography>
                 <RadioGroup row >
                   <FormControlLabel value="Single" control={<Radio />} label="Single" />
                   <FormControlLabel value="Multiple" control={<Radio />} label="Multiple" />
@@ -77,7 +79,7 @@ export const DocModal = () => {
               </FormControl>
 
               <Grid container alignItems="center" mb={2}>
-                <Typography mr={6}>Testing Center 1</Typography>
+                <Typography mr={6} color='#181c4f'>Testing Center 1</Typography>
                 <FormControl style={{minWidth: 160, marginRight: '2%'}}>
                 <InputLabel>Select Client</InputLabel>
                     <Select
@@ -94,7 +96,7 @@ export const DocModal = () => {
               </Grid>
 
               <Grid container alignItems="center" mb={2}>
-                <Typography mr={6}>Testing Center 2</Typography>
+                <Typography mr={6} color='#181c4f'>Testing Center 2</Typography>
                 <FormControl style={{minWidth: 160, marginRight: '2%'}}>
                 <InputLabel>Select Client</InputLabel>
                     <Select
@@ -111,7 +113,7 @@ export const DocModal = () => {
               </Grid>
 
               <Grid container alignItems="center" mb={2}>
-                <Typography mr={6}>Testing Center 3</Typography>
+                <Typography mr={6} color='#181c4f'>Testing Center 3</Typography>
                 <FormControl style={{minWidth: 160, marginRight: '2%'}}>
                 <InputLabel>Select Client</InputLabel>
                     <Select
@@ -128,7 +130,7 @@ export const DocModal = () => {
               </Grid>
 
               <Grid container alignItems="center" mb={2}>
-                <Typography mr={6}>Testing Center 4</Typography>
+                <Typography mr={6} color='#181c4f'>Testing Center 4</Typography>
                 <FormControl style={{minWidth: 160, marginRight: '2%'}}>
                 <InputLabel>Select Client</InputLabel>
                     <Select
@@ -149,9 +151,9 @@ export const DocModal = () => {
         </Grid>
 
         <Box align='center'>
-          <Typography>Data in the import file is correct. Please continue to import.</Typography>
-          <Button>Continue Import</Button>
-          <Button>Cancel</Button>
+          <Typography color='#181c4f'>Data in the import file is correct. Please continue to import.</Typography>
+              <Button variant="contained" size='large' sx={{marginRight: '2em', backgroundColor: '#181c4f'}}>Continue Import</Button>
+              <Button variant="outlined" size='large' sx={{color: '#cf6304', borderColor: '#cf6304'}}>Cancel</Button>
         </Box>
       </>
     );
