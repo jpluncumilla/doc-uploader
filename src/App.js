@@ -1,37 +1,35 @@
-import './App.css';
-import { useState } from 'react';
-import { Button, Box, Modal } from '@mui/material';
-import {DocModal} from './components/DocModal';
+import "./App.css";
+import { useState } from "react";
+import { Button, Box, Modal } from "@mui/material";
+import { DocModal } from "./components/DocModal";
 
 const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '70%',
-  height: '85%',
-  bgcolor: '#ffffff',
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "70%",
+  height: "85%",
+  bgcolor: "#ffffff",
   p: 6,
-  borderRadius: 5
-}
+  borderRadius: 5,
+};
 
 function App() {
-  const [openDialog, setOpenDialog] = useState(true)
+  const [openDialog, setOpenDialog] = useState(true);
 
   const dialogToggle = () => {
-    setOpenDialog(currentDialog => !currentDialog)
-  }
+    setOpenDialog((currentDialog) => !currentDialog);
+  };
 
   return (
-    <div className="App">
+    <div className='App'>
       <div className='App-header'>
-        <Button variant="outlined" onClick={dialogToggle}>
+        <Button variant='outlined' onClick={dialogToggle}>
           Open dialog
         </Button>
 
-        <Modal
-          open={openDialog}
-        >
+        <Modal open={openDialog}>
           <Box sx={style}>
             <DocModal />
           </Box>
